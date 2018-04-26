@@ -1,0 +1,19 @@
+<view class="list-container">
+    <!-- 轮播组件 -->
+    <swiper 
+        indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" 
+        interval="{{interval}}" 
+        duration="{{duration}}"
+        circular="{true}">
+        <block wx:for="{{bannerList}}">
+            <swiper-item>
+                <image src="{{item}}" class="slide-image"/>
+            </swiper-item>
+        </block>
+    </swiper>
+    <!-- 列表分页组件 -->
+    <view>
+        
+    </view>
+</view>
