@@ -1,3 +1,4 @@
+import {defaultMenuListReponse} from '../../mock/list';
 Page({
     data: {
         defaultBannerList: [
@@ -37,13 +38,15 @@ Page({
             url:`https://we.meishichina.com/wechat/we.php?ac=advert&op=getTimeLineList&page=${this.page}`,
             success: function(res) {
                 let data = res.data.data;
+                console.log(data);
                 self.setData({
                     menuList: data
                 });
             },
-            error: function () {
+            error: function (e) {
+                let data = defaultMenuListReponse.data;
                 self.setData({
-                    menuList: this.defaultMenuList
+                    menuList: data
                 });
             }
         });
