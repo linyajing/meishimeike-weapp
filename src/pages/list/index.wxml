@@ -1,0 +1,46 @@
+<view class="container list-container">
+    <!-- 轮播组件 -->
+    <swiper 
+        indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" 
+        interval="{{interval}}" 
+        duration="{{duration}}"
+        circular="{true}">
+        <block wx:for="{{bannerList}}" wx:key="{{index}}">
+            <swiper-item>
+                <image src="{{item}}" class="slide-image" mode="aspectFill"/>
+            </swiper-item>
+        </block>
+    </swiper>
+    <!-- 列表分页组件 -->
+    <view class="scroll-container">
+        <view wx:for="{{menuList}}" wx:key="{{item.adid}}">
+            <view wx:if="{{item.templetid === '1'}}" class="item temp1">
+                <image src="{{item.pic640}}"/>
+                <view class="content">
+                    <text class="title">{{item.subject}}</text>
+                    <text class="desc text-single-snap">{{item.description}}</text>
+                    <text class="remark">{{item.remark}}</text>
+                </view>
+            </view>
+            <view wx:if="{{item.templetid === '2'}}" class="item temp2">
+                <text class="text-single-snap title">{{item.subject}}</text>
+                <view class="image">
+                    <image 
+                        wx:for="{{item.picset}}" 
+                        wx:for-item="childItem" 
+                        wx:for-index="childIndex" 
+                        wx:key="childItem" 
+                        wx:if="{{childIndex < 3}}"
+                        mode="aspectFit" 
+                        src="{{childItem}}"/>
+                </view>
+                <view class="remark">{{item.remark}}</view>
+            </view>
+            <view wx:if="{{item.templetid === '3'}}" class="item temp3">
+                <text class="text-single-snap title">{{item.subject}}</text>
+                <image src="{{item.pic}}"/>
+            </view>
+        </view>
+    </view>
+</view>

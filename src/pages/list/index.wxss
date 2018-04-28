@@ -1,0 +1,62 @@
+.list-container {
+    width: 100%;
+}
+.slide-image {
+    width: 100%;
+    height: 100%;
+}
+.scroll-container {
+    padding-left: 40rpx;
+    padding-right: 45rpx;
+}
+.scroll-container .item {
+    border-bottom: 1rpx solid #e8e8e8;
+}
+.scroll-container .item .title {
+    font-size: 30rpx;
+    line-height: 1;
+    margin: 22rpx 0;
+    color: #505050;
+}
+.scroll-container .temp1 {
+    padding: 20rpx 0;
+    display: flex;
+    justify-content: space-between;
+}
+.scroll-container .temp1 image {
+    width: 210rpx;
+    height: 210rpx;
+}
+.scroll-container .temp1 .content {
+    width: 430rpx;
+}
+.scroll-container .temp1 .content .title{
+    padding: 12rpx 0;
+}
+.scroll-container .temp1 .content .desc{
+    padding: 36rpx 0;
+    font-size: 28rpx;
+    color: #888;
+}
+.scroll-container .temp1 .content .remark{
+    padding: 36rpx 6rpx;
+    font-size: 24rpx;
+    color: #8f8f8f;
+}
+.scroll-container .temp2 .image{
+    display: flex;
+    justify-content: space-around;
+}
+.scroll-container .temp2 image{
+    width: 210rpx;
+    height: 210rpx;
+}
+.scroll-container .temp2 .remark {
+    padding: 20rpx 0;
+    font-size: 22rpx;
+    color: #8f8f8f;
+}
+.scroll-container .temp3 image {
+    width: 100%;
+    height: 350rpx;
+}
