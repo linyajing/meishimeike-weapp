@@ -12,7 +12,6 @@ var gulpTaskList = fs.readdirSync(path.join('./gulp/'));
 gulpTaskList.forEach(function (taskFilePath) {
     var suffix = taskFilePath.split('.').pop();
     if (suffix === 'js') {
-        console.log(11, taskFilePath);
         require('./gulp/' + taskFilePath)(gulp);
     }
 });
