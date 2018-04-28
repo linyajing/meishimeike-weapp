@@ -12,9 +12,13 @@
             </swiper-item>
         </block>
     </swiper>
+    <!-- 主导航组件 -->
+    <view class="main-nav">
+        
+    </view>
     <!-- 列表分页组件 -->
     <view class="scroll-container">
-        <view wx:for="{{menuList}}" wx:key="{{item.adid}}">
+        <block wx:for="{{menuList}}" wx:key="{{item.adid}}">
             <view wx:if="{{item.templetid === '1'}}" class="item temp1">
                 <image src="{{item.pic640}}"/>
                 <view class="content">
@@ -41,6 +45,6 @@
                 <text class="text-single-snap title">{{item.subject}}</text>
                 <image src="{{item.pic}}"/>
             </view>
-        </view>
+        </block>
     </view>
 </view>
