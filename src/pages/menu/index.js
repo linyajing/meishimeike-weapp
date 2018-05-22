@@ -1,58 +1,34 @@
 import {defaultBannerListReponse, defaultMenuListReponse} from '../../mock/list';
 Page({
     data: {
-        menuList: [],
-        indicatorDots: true,
-        autoplay: true,
-        interval: 5000,
-        duration: 1000,
-        page: 1,
-        mainNav: [
-            {title: '菜谱分类'},
-            {title: '食材大全'},
-            {title: '专题'},
-            {title: '菜单'},
-            {title: '一周热门'},
-            {title: '人气菜肴'},
-            {title: '家常菜'},
-            {title: '健康养生'}
-        ]
+        id: ''
     },
-    onLoad () {
-        this.onRequsetBanner();
-        this.onRequestList();
-    },
-    onShow() {
-        console.log('show列表页');
+    onLoad (option) {
         this.setData({
-            text: 'onShow'
+            id: option.id
         });
     },
+    onShow() {
+    },
     onReady() {
-        console.log('ready列表页');
+        console.log('ready菜单');
         // 此函数只能在ready中获取
         var pages = getCurrentPages();
         // 获取当前页面实例 current === this => true
         var current = pages[pages.length -1];
         console.log(current === this);
-        this.setData({
-            text: 'onReady'
-        });
     },
     onHide() {
-        console.log('hide列表页');
+        console.log('hide菜单页');
     },
     onUnload () {
-        console.log('unload列表页');
+        console.log('unload菜单页');
     },
     onPullDownRefresh () {
-        // 停止下拉刷新，可以让页面下拉面板快速隐藏
-        wx.stopPullDownRefresh();
         console.log('列表页下拉刷新');
     },
     onReachBottom () {
         console.log('列表页上拉触底');
-        this.onRequestList();
     },
     onRequestList () {
         wx.request({
@@ -102,13 +78,6 @@ Page({
         let dataSet = event.currentTarget.dataset;
         wx.navigateTo({
             url: `/pages/${navTo[dataSet.temp]}/index?id=${dataSet.id}`
-        });
-    },
-    // 广告专题跳转
-    adsJump (event) {
-        let dataSet = event.currentTarget.dataset;
-        wx.navigateTo({
-            url: `/pages/subjectDetail/index?adid=${dataSet.adid}&subid=${dataSet.subid}`
         });
     }
 });

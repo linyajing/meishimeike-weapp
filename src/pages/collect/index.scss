@@ -1,0 +1,52 @@
+.collect-container {
+    padding: 0 40rpx;
+    color: #333;
+    text-align: center;
+    .title {
+        padding: 50rpx 0;
+        font-size: 48rpx;
+    }
+    .desc {
+        font-size: 28rpx;
+    }
+    .avart {
+        text-align: center;
+        margin-top: 45rpx;
+        margin-bottom: 45rpx;
+        image {
+            width: 100rpx;
+            height: 100rpx;
+            border-radius: 50%;
+        }
+        .name {
+            color: #666;
+            font-size: 26rpx;
+            padding-top: 20rpx;
+        }
+    }
+    .menu-list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .item {
+            margin-bottom: 40rpx;
+            image {
+                width: 324rpx;
+                height: 324rpx;
+            }
+            .title {
+                padding: 8rpx 0;
+                font-size: 24rpx;
+            }
+            .username {
+                font-size: 20rpx;
+                color: #ccc;
+            }
+        }
+    }
+    .end {
+        padding-bottom: 30rpx;
+        color: #ccc;
+        font-size: 24rpx;
+    }
+}

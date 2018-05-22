@@ -1,0 +1,23 @@
+<view class="container collect-container">
+    <view class="title">{{collectDetail.subject}}</view>
+    <view class="desc">{{collectDetail.message}}</view>
+    <view class="avart">
+        <image src="{{collectDetail.avatar}}"/>
+        <view class="name">{{collectDetail.username}}</view>
+    </view>
+    <view class="menu-list">
+        <block wx:for="{{collectMenuList}}" wx:key="{{item.id}}" >
+            <view 
+                class="item" 
+                bindtap="navJump"
+                data-id="{{item.id}}">
+                <image src="{{item.fcover}}"/>
+                <view class="title">{{item.title}}</view>
+                <view class="username">{{item.username}}</view>
+            </view>
+        </block>
+    </view>
+    <view class="end">
+        . End .
+    </view>
+</view>

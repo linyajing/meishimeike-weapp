@@ -103,12 +103,5 @@ Page({
         wx.navigateTo({
             url: `/pages/${navTo[dataSet.temp]}/index?id=${dataSet.id}`
         });
-    },
-    // 广告专题跳转
-    adsJump (event) {
-        let dataSet = event.currentTarget.dataset;
-        wx.navigateTo({
-            url: `/pages/subjectDetail/index?adid=${dataSet.adid}&subid=${dataSet.subid}`
-        });
     }
 });

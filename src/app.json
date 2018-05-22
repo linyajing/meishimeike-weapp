@@ -2,7 +2,11 @@
   "pages":[
     "pages/list/index",
     "pages/topic/index",
-    "pages/my/index"
+    "pages/my/index",
+    "pages/collect/index",
+    "pages/menu/index",
+    "pages/subjectList/index",
+    "pages/subjectDetail/index"
   ],
   "window":{
     "backgroundTextStyle": "light",

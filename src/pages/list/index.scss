@@ -4,11 +4,34 @@
         width: 100%;
         height: 100%;
     }
+    .main-nav {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 20rpx 0;
+        border-bottom: 1rpx solid #e8e8e8; 
+        .item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 0 0 25%;
+            padding: 20rpx 0;
+            image {
+                width: 47rpx;
+                height: 47rpx;
+            }
+            text {
+                font-size: 24rpx;
+                color: #333;
+            }
+        }
+    }
     .scroll-container {
         padding-left: 40rpx;
         padding-right: 45rpx;
         .item {
-            border-bottom: 1rpx solid #e8e8e8;
+            border-bottom: 1rpx solid #e8e8e8;  
             .title {
                 font-size: 30rpx;
                 line-height: 1;

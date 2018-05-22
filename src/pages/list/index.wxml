@@ -7,19 +7,33 @@
         duration="{{duration}}"
         circular="{true}">
         <block wx:for="{{bannerList}}" wx:key="{{index}}">
-            <swiper-item>
+            <swiper-item 
+                bindtap="adsJump"
+                data-adid="{{item.adid}}"
+                data-subid="{{item.subid}}"
+            >
                 <image src="{{item}}" class="slide-image" mode="aspectFill"/>
             </swiper-item>
         </block>
     </swiper>
     <!-- 主导航组件 -->
     <view class="main-nav">
-        
+        <block wx:for="{{mainNav}}" wx:key="{{index}}">
+            <view class="item">
+                <image src="{{'../../common/images/menu' + (index + 1) + '.png'}}"/>
+                <text>{{item.title}}</text>
+            </view>
+        </block>
     </view>
     <!-- 列表分页组件 -->
     <view class="scroll-container">
         <block wx:for="{{menuList}}" wx:key="{{item.adid}}">
-            <view wx:if="{{item.templetid === '1'}}" class="item temp1">
+            <view 
+                wx:if="{{item.templetid === '1'}}" 
+                class="item temp1" 
+                bindtap="navJump" 
+                data-id="{{item.subid}}"
+                data-temp="{{item.templetid}}">
                 <image src="{{item.pic640}}"/>
                 <view class="content">
                     <text class="title">{{item.subject}}</text>
@@ -27,7 +41,12 @@
                     <text class="remark">{{item.remark}}</text>
                 </view>
             </view>
-            <view wx:if="{{item.templetid === '2'}}" class="item temp2">
+            <view 
+                wx:if="{{item.templetid === '2'}}" 
+                class="item temp2" 
+                bindtap="navJump" 
+                data-id="{{item.subid}}"
+                data-temp="{{item.templetid}}">
                 <text class="text-single-snap title">{{item.subject}}</text>
                 <view class="image">
                     <image 
@@ -41,7 +60,12 @@
                 </view>
                 <view class="remark">{{item.remark}}</view>
             </view>
-            <view wx:if="{{item.templetid === '3'}}" class="item temp3">
+            <view 
+                wx:if="{{item.templetid === '3'}}" 
+                class="item temp3" 
+                bindtap="navJump"
+                data-id="{{item.subid}}"
+                data-temp="{{item.templetid}}">
                 <text class="text-single-snap title">{{item.subject}}</text>
                 <image src="{{item.pic}}"/>
             </view>
